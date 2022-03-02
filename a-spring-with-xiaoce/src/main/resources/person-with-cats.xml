@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 给 Person 赋属性 -->
+    <bean id="person" class="com.my.person.impl.PersonImpl">
+        <property name="id" value="1"/>
+        <property name="name" value="Jack"/>
+    </bean>
+
+    <!-- 给 Cat 赋属性 -->
+    <bean id="cat" class="com.my.cat.impl.CatImpl">
+        <property name="id" value="1"/>
+        <property name="name" value="jack-cat"/>
+        <property name="age" value="7"/>
+        <property name="nickName" value="lucy"/>
+        <property name="master" ref="person"/>
+    </bean>
+</beans>

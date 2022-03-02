@@ -5,6 +5,8 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/basic_dl/quickstart-byname.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/quickstart-bytype.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/person-with-cats.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -26,5 +28,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.3.16" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.3.16" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.16" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.22" level="project" />
   </component>
 </module>
