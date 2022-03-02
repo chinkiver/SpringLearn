@@ -13,10 +13,12 @@ public class UserDaoImplTest {
         // scope 为 singleton 时，获取 xml 时创建
         BeanFactory factory = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        UserDao user1 = factory.getBean(UserDao.class);
-        UserDao user2 = factory.getBean(UserDao.class);
+        UserDao user = (UserDao) factory.getBean("user");
+        UserDao userCreatedByStaticFactory = (UserDao) factory.getBean("userCreatedByStaticFactory");
+        UserDao userCreatedByDynaFactory = (UserDao) factory.getBean("userCreatedByDynaFactory");
 
-        System.out.println(user1);
-        System.out.println(user2);
+        System.out.println(user);
+        System.out.println(userCreatedByStaticFactory);
+        System.out.println(userCreatedByDynaFactory);
     }
 }

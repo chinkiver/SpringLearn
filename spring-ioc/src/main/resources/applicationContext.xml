@@ -3,7 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--构造-->
     <bean id="user" class="com.my.dao.impl.UserDaoImpl" scope="singleton" init-method="init" destroy-method="destroy"></bean>
+
+    <!--静态工厂-->
+    <bean id="userCreatedByStaticFactory" class="com.my.factory.UserDaoFactory" factory-method="create"></bean>
+
+    <!--动态工厂-->
+    <bean id="userDynaFactory" class="com.my.factory.UserDaoDynaFactory"></bean>
+    <bean id="userCreatedByDynaFactory" class="com.my.dao.impl.UserDaoImpl" factory-bean="userDynaFactory"></bean>
 
     <bean id="person" class="com.my.dao.impl.PersonDaoImpl" scope="prototype"></bean>
 </beans>
