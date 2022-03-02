@@ -13,6 +13,7 @@
         <module>baseServlet</module>
         <module>a-maven-project</module>
         <module>a-spring-with-xiaoce</module>
+        <module>spring-ioc</module>
     </modules>
 
     <properties>
