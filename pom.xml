@@ -11,6 +11,7 @@
     <modules>
         <module>start</module>
         <module>baseServlet</module>
+        <module>a-maven-project</module>
     </modules>
 
     <properties>
